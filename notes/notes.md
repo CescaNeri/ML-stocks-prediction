@@ -17,15 +17,21 @@ Additional data may be useful for the analysis BUT we should also select the mos
 ## Tests and Accuracy
 
 **Predictors**: ['Open', 'High', 'Low', 'Close', 'Volume', 't1']
+
 **Classifier**: RandomForestClassifier(n_estimators=100, min_samples_split=100, random_state=1)
+
 **Backtest**: 1
+
 **Time Horizons**: 0
 
 ![](test.jpg)
 
 **Predictors**: ['OBV', 'ADL', 'ADX', 'RSI', 'STOCH', 'SMA']
+
 **Cassifier**:  RandomForestClassifier(n_estimators=100, min_samples_split=100, random_state=1)
+
 **Backtest**: 0
+
 **Time Horizons**: 0
 
 ![](test1.jpg)
