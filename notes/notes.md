@@ -1,5 +1,7 @@
 # Random Ideas
 
+Maybe we can select a shorter time horizon (instead of taking all the data, we can focus only on the last 10 years ?)
+
 - Add financial indicators from finTa library (as a column ?) 
 - Add relevant data to the table to increase accuracy 
     - primary key: date
