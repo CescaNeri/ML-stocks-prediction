@@ -16,6 +16,17 @@ Additional data may be useful for the analysis BUT we should also select the mos
 
 [See NVIDIA business model canvas](https://vizologi.com/business-strategy-canvas/nvidia-business-model-canvas/)
 
+## Model 1 - bitcoin
+
+Add the trend of bitcoin stock to the model (bitcoin historical data: 2020, so we keep the same time horizon for nvidia).
+
+**Accuracy** around 91% -> way tooooooo high, probably overfitting :(((
+
+## Model 2 - financial indicator
+
+Take ALL the historical data of nvidia (from 1999) and apply some financial indicators.
+Run the model and apply backtest BUT accuracy is not that high (around 65% which, considering a natural probability of 50%, it's not that good).
+
 ## Tests and Accuracy
 
 **Predictors**: ['Open', 'High', 'Low', 'Close', 'Volume', 't1']
