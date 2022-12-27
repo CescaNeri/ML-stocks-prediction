@@ -10,7 +10,8 @@ Check out the [Colab Notebook](stock_prediction.ipynb) to review the execution o
 
 ## Requirements
 
-I should write about **software dependencies** but I'm not that sure about them so TBD
+Since the project relies on some external **libraries**, it is important to keep the dependencies updated with the latest stable versions of all the libraries and tools used.
+The [list of the requirements](requirements.txt) is automatically updated by *Renovate*, which opens a pull request as soon as new updates in the project dependencies are available.
 
 ## About the Model
 
