@@ -26,7 +26,7 @@ The first model is trained by using *ohlcv* data of BTC, the **Bitcoin USD** pri
 The second model uses the same learning algorithm but is trained using some key **financial indicators** like SMA, RSI, OBV and others.
 Whereas the third model uses `LinearRegression` with the **exponential moving average** (EMA) as a predictor for the stock closing price.
 
-## Setup and Usage
+## Setup
 
 Clone the git repository:
 
@@ -36,7 +36,7 @@ git clone https://github.com/CescaNeri/ML-stocks-prediction.git && cd ML-stocks-
 
 Set up a virtual environment to install dependencies:
 
-```
+```bash
 python3 -m venv /path/for/the/virtual/environment
 ```
 
@@ -48,13 +48,13 @@ source path/bin/activate
 
 Install the dependencies:
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
 Now that dependencies are in place, we can deactivate the virtual environment and we are ready to execute the program: 
 
-```
+```bash
 pyhton /to/be/determined.py
 ```
 
