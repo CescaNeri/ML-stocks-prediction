@@ -21,6 +21,7 @@ The model is trained using data about NVIDIA stock (*Open, High, Low, Close, Vol
 The **regression** and **classification** algorithms used in the project are featured by the `scikit-learn` machine learning library, while data modeling is mainly performed using the `pandas` software library. 
 
 The project shows three different machine learning models which use different variables and algorithms:
+
 The first model is trained by using *ohlcv* data of BTC, the **Bitcoin USD** price from 2020 until today, and uses the `RandomForestClassifier` as learning algorithm.
 The second model uses the same learning algorithm but is trained using some key **financial indicators** like SMA, RSI, OBV and others.
 Whereas the third model uses `LinearRegression` with the **exponential moving average** (EMA) as a predictor for the stock closing price.
