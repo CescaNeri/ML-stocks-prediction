@@ -26,6 +26,38 @@ The first model is trained by using *ohlcv* data of BTC, the **Bitcoin USD** pri
 The second model uses the same learning algorithm but is trained using some key **financial indicators** like SMA, RSI, OBV and others.
 Whereas the third model uses `LinearRegression` with the **exponential moving average** (EMA) as a predictor for the stock closing price.
 
+## Setup and Usage
+
+Clone the git repository:
+
+```
+git clone https://github.com/CescaNeri/ML-stocks-prediction.git && cd ML-stocks-prediction
+```
+
+Set up a virtual environment for the dependencies:
+
+```
+python3 -m venv /path/for/the/virtual/environment
+```
+
+Activate the virtual environment:
+
+```
+source path/bin/activate
+```
+
+Install the dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+Execute the python program:
+
+```
+pyhton /to/be/determined.py
+```
+
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![Build status](https://github.com/renovatebot/renovate/workflows/build/badge.svg)](https://github.com/renovatebot/renovate/actions)
 
