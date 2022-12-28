@@ -30,11 +30,11 @@ Whereas the third model uses `LinearRegression` with the **exponential moving av
 
 Clone the git repository:
 
-```
+```python
 git clone https://github.com/CescaNeri/ML-stocks-prediction.git && cd ML-stocks-prediction
 ```
 
-Set up a virtual environment for the dependencies:
+Set up a virtual environment to install dependencies:
 
 ```
 python3 -m venv /path/for/the/virtual/environment
@@ -42,7 +42,7 @@ python3 -m venv /path/for/the/virtual/environment
 
 Activate the virtual environment:
 
-```
+```bash
 source path/bin/activate
 ```
 
@@ -52,7 +52,7 @@ Install the dependencies:
 pip install -r requirements.txt
 ```
 
-Execute the python program:
+Now that dependencies are in place, we can deactivate the virtual environment and we are ready to execute the program: 
 
 ```
 pyhton /to/be/determined.py
