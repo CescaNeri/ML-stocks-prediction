@@ -40,6 +40,8 @@ def accuracy(model, test):
   preds = pd.Series(preds, index = test.index)
   solution = precision_score(test['Target'], preds)
   print('Final accuracy amounts to: {}'.format(solution))
+  combined = pd.concat({'Target': test['Target'],'Predictions': preds}, axis=1)
+  combined.plot()
 
 def RandomForest(df, predictors, split):
   df = df.dropna()
@@ -51,7 +53,7 @@ def RandomForest(df, predictors, split):
 
 # Execute the Model
 
-model_choice = input("""Select the Machine Learning model among these three: 
+model_choice = input("""Select a Machine Learning model among these three: 
     \n 1. Bitcoin Model (type: 1) 
     \n 2. Financial Indicators Model (type: 2) 
     \n 3. Regression Model (type: 3) 
@@ -68,7 +70,6 @@ if model_choice == '1':
   target(nvidia, 't1', 'Target')
   target(bitcoin, 't1_b', 'Target_b')
 
-  
   bitcoin.rename(columns = {'Close': 'Close_B', 'High': 'High_B', 'Low': 'Low_B', 
                        'Adj Close': 'Adj Close_B', 'Volume': 'Volume_B', 'Open': 'Open_B'}, 
             inplace = True)
