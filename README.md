@@ -55,7 +55,7 @@ pip install -r requirements.txt
 Now that dependencies are in place, we can **deactivate** the virtual environment and we are ready to execute the program: 
 
 ```bash
-pyhton /to/be/determined.py
+python stock-prediction.py
 ```
 
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
