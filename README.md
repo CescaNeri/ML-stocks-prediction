@@ -30,7 +30,7 @@ Whereas the third model uses `LinearRegression` with the **exponential moving av
 
 Clone the git repository:
 
-```python
+```bash
 git clone https://github.com/CescaNeri/ML-stocks-prediction.git && cd ML-stocks-prediction
 ```
 
