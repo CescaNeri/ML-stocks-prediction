@@ -59,8 +59,21 @@ def tech_analysis(df, indicators):
                        'Adj Close': 'adj close', 'Volume': 'volume', 'Open': 'open'}, 
             inplace = True)
   for indicator in indicators:
-    df[indicator] = eval('TA.' + indicator + '(data)')
+    df[indicator] = eval('TA.' + indicator + '(df)')
   return df
+
+def evaluate_model(model, y_pred, y_test):
+  print('Model Coefficients: {}'.format(model.coef_))
+  print('Standard Deviation: {}'.format(np.std(y_pred)))
+  print('Mean Absolute Error: {}'.format(mean_absolute_error(y_test, y_pred)))
+  print('Coefficient of Determination: {}'.format(r2_score(y_test, y_pred)))
+
+def linear_regression(df, indicator, split):
+  X_train, X_test, y_train, y_test = train_test_split(df[['close']], df[[indicator]], test_size=split)
+  model = LinearRegression()
+  model.fit(X_train, y_train)
+  y_pred = model.predict(X_test)
+  return evaluate_model(model, y_pred, y_test)
 
 # Execute the Model
 
@@ -110,3 +123,13 @@ elif model_choice == '2':
        'ADX', 'RSI', 'STOCH', 'SMA']
   random_forest(nvidia, predictors, -50)
 
+elif model_choice == '3':
+  nvidia = get_data('NVDA')
+
+  indicators = ['EMA']
+  tech_analysis(nvidia, indicators)
+
+  to_del = ['open', 'high', 'low', 'volume', 'Dividends', 'Stock Splits']
+  clean(nvidia, to_del)
+
+  linear_regression(nvidia, 'EMA', .2)
