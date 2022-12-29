@@ -58,6 +58,29 @@ Now that dependencies are in place, we can **deactivate** the virtual environmen
 python stock-prediction.py
 ```
 
+The program wil ask you to choose a **model** among three options:
+
+```bash
+Select a Machine Learning model among these three:
+
+ 1. Bitcoin Model (type: 1)
+
+ 2. Financial Indicators Model (type: 2)
+
+ 3. Regression Model (type: 3)
+
+```
+
+The first and the second model will display the **final accuracy** level directly on the terminal and, at the same time, will save a picture plotting target values vs predicted values over a 2.5 month period.
+
+![plot](model-two-financial.png)
+
+The third model, on the other hand, will display some **metrics** useful to evaluate the regression model, which are:
+
+- Standard Deviation
+- Mean Absolute Error
+- Coefficient of Determination (R2)
+
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![Build status](https://github.com/renovatebot/renovate/workflows/build/badge.svg)](https://github.com/renovatebot/renovate/actions)
 
