@@ -19,6 +19,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.utils import shuffle
 
 # Set functions
 
@@ -47,8 +48,9 @@ def accuracy(model, test, predictors, figname):
 def random_forest(df, predictors, split, figname):
   df = df.dropna()
   model = RandomForestClassifier(n_estimators=100, min_samples_split=100, random_state=1)
-  train = df.iloc[:split]
-  test = df.iloc[split:]
+  df = df(shuffle)
+  train = df.iloc[:int(split*len(df))]
+  test = df.iloc[int(split*len(df)):]
   model.fit(train[predictors], train['Target'])
   return accuracy(model, test, predictors, figname)
 
@@ -102,7 +104,7 @@ if model_choice == '1':
 
   predictors = ['Open', 'High', 'Low', 'Close', 'Volume', 't1', 'Open_B',
        'High_B', 'Low_B', 'Close_B', 'Volume_B', 't1_b', 'Target_b']
-  random_forest(nvidia, predictors, -50, 'model-one-bitcoin')
+  random_forest(nvidia, predictors, .75, 'model-one-bitcoin')
 
 elif model_choice == '2':
   nvidia = get_data('NVDA')
@@ -122,7 +124,7 @@ elif model_choice == '2':
 
   predictors = ['Open', 'High', 'Low', 'Close', 'Volume', 't1', 'OBV', 'ADL',
        'ADX', 'RSI', 'STOCH', 'SMA']
-  random_forest(nvidia, predictors, -50, 'model-two-financial')
+  random_forest(nvidia, predictors, .8, 'model-two-financial')
 
 elif model_choice == '3':
   nvidia = get_data('NVDA')
