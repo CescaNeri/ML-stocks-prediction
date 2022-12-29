@@ -73,7 +73,7 @@ Select a Machine Learning model among these three:
 
 The first and the second model will display the **final accuracy** level directly on the terminal and, at the same time, will save a picture plotting target values vs predicted values over a 2.5 month period.
 
-![plot](model-two-financial.png)
+![plot](img/model-two-financial.png)
 
 The third model will display some key **metrics** useful to evaluate the regression model, which are:
 
@@ -81,10 +81,10 @@ The third model will display some key **metrics** useful to evaluate the regress
 - Mean Absolute Error
 - Coefficient of Determination (R2)
 
-As any one of us could guess, the stock market is unstable and, more than often, unpredictable.
+As any one of us could guess, the stock market is unstable and, more than often, **unpredictable**.
 Of course, fundamental factors such as a company’s intrinsic value, assets, quarterly performance, recent investments, and strategies all affect the traders’ trust in the company and thus the price of its stock. 
 
-Only a few of the latter can be incorporated effectively into a mathematical model, making stock price prediction using machine learning challenging and unreliable to a certain extent.
+Only a few of the latter can be incorporated effectively into a mathematical model, making stock price prediction using machine learning **challenging** and **unreliable** to a certain extent.
 
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![Build status](https://github.com/renovatebot/renovate/workflows/build/badge.svg)](https://github.com/renovatebot/renovate/actions)
