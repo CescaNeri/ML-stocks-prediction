@@ -73,7 +73,7 @@ Select a Machine Learning model among these three:
 
 The first and the second model will display the **final accuracy** level directly on the terminal and, at the same time, will save a picture plotting target values vs predicted values over a 2.5 month period.
 
-![plot](img/model-two-financial.png)
+![plot](img/model-one-bitcoin.png)
 
 The third model will display some key **metrics** useful to evaluate the regression model, which are:
 
