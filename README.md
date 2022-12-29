@@ -52,7 +52,7 @@ Install the dependencies:
 pip install -r requirements.txt
 ```
 
-Now that dependencies are in place, we can **deactivate** the virtual environment and we can run the program: 
+Now that dependencies are in place, we can **deactivate** the virtual environment and run the program: 
 
 ```bash
 python stock-prediction.py
