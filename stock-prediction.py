@@ -21,6 +21,8 @@ from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.utils import shuffle
 
+np.random.seed(1821)
+
 # Set functions
 
 def get_data(stock):
@@ -48,7 +50,7 @@ def accuracy(model, test, predictors, figname):
 def random_forest(df, predictors, split, figname):
   df = df.dropna()
   model = RandomForestClassifier(n_estimators=100, min_samples_split=100, random_state=1)
-  df = df(shuffle)
+  df = shuffle(df)
   train = df.iloc[:int(split*len(df))]
   test = df.iloc[int(split*len(df)):]
   model.fit(train[predictors], train['Target'])
