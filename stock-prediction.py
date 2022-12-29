@@ -35,21 +35,22 @@ def target(df, t_name, target_name):
   df[target_name] = (df[t_name] > df['Close']).astype(int)
   return df
 
-def accuracy(model, test, predictors):
+def accuracy(model, test, predictors, figname):
   preds = model.predict(test[predictors])
   preds = pd.Series(preds, index = test.index)
   solution = precision_score(test['Target'], preds)
   print('Final accuracy amounts to: {}'.format(solution))
   combined = pd.concat({'Target': test['Target'],'Predictions': preds}, axis=1)
   combined.plot()
+  plt.savefig(figname)
 
-def random_forest(df, predictors, split):
+def random_forest(df, predictors, split, figname):
   df = df.dropna()
   model = RandomForestClassifier(n_estimators=100, min_samples_split=100, random_state=1)
   train = df.iloc[:split]
   test = df.iloc[split:]
   model.fit(train[predictors], train['Target'])
-  return accuracy(model, test, predictors)
+  return accuracy(model, test, predictors, figname)
 
 def smooth_data(data, alpha):
   return data.ewm(alpha=alpha).mean()
@@ -101,7 +102,7 @@ if model_choice == '1':
 
   predictors = ['Open', 'High', 'Low', 'Close', 'Volume', 't1', 'Open_B',
        'High_B', 'Low_B', 'Close_B', 'Volume_B', 't1_b', 'Target_b']
-  random_forest(nvidia, predictors, -50)
+  random_forest(nvidia, predictors, -50, 'model-one-bitcoin')
 
 elif model_choice == '2':
   nvidia = get_data('NVDA')
@@ -121,7 +122,7 @@ elif model_choice == '2':
 
   predictors = ['Open', 'High', 'Low', 'Close', 'Volume', 't1', 'OBV', 'ADL',
        'ADX', 'RSI', 'STOCH', 'SMA']
-  random_forest(nvidia, predictors, -50)
+  random_forest(nvidia, predictors, -50, 'model-two-financial')
 
 elif model_choice == '3':
   nvidia = get_data('NVDA')
