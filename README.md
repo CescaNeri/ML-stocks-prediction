@@ -16,7 +16,7 @@ The [list of the requirements](requirements.txt) is automatically updated by *Re
 ## About the Model
 
 The goal of the model is to predict whether we should **buy** the stock (**target = 1**), meaning that the price is going to increase in the future, or **sell** the stock (**target = 0**), when the price is going to decrease in the future.
-The model is trained using data about NVIDIA stock (*Open, High, Low, Close, Volume*) analyzed over a given period, as well as data about main business stakeholders and key financial indicators. 
+The model is trained using data about NVIDIA stock (*Open, High, Low, Close, Volume*) analyzed over a given period of time, as well as data about main business stakeholders and key financial indicators. 
 
 The **regression** and **classification** algorithms used in the project are featured by the `scikit-learn` machine learning library, while data modeling is mainly performed using the `pandas` software library. 
 
