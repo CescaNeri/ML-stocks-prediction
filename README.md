@@ -4,7 +4,7 @@ This repository contains a simple AI system aimed at predicting the trend of the
 The data needed for the analysis are imported through `yfinance`, an open-source tool that uses **Yahoo**'s publicly available APIs to retrieve data about listed stocks.
 
 The financial and banking sectors are incredibly **data-rich**, with millions of transactions and transfers occurring every day.
-Machine learning models cab be used to understand emerging and underlying trends in order to gain advantage in the **financial sector**.
+Machine learning models can be used to understand emerging and underlying trends in order to gain advantage in the **financial sector**.
 
 Check out the [Colab Notebook](stock_prediction.ipynb) to review the execution of the project. 
 
