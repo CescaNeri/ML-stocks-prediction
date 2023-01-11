@@ -71,7 +71,7 @@ Select a Machine Learning model among these three:
 
 ```
 
-The first and the second model will display the **final accuracy** level directly on the terminal and, at the same time, will save a picture plotting target values vs predicted values over the analyzed period.
+The first and the second model will display the **final accuracy** level directly on the terminal and, at the same time, will save a picture plotting *target values vs predicted values* over the analyzed period.
 
 ![plot](img/model-one-bitcoin.png)
 
