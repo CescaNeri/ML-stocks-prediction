@@ -1,6 +1,6 @@
 pip ==22.3.1
 yfinance ==0.2.4
-pandas ==1.5.2
+pandas ==1.5.3
 numpy ==1.24.1
 matplotlib ==3.6.3
 finta ==1.3
