@@ -1,5 +1,5 @@
 pip ==23.2.1
-yfinance ==0.2.26
+yfinance ==0.2.27
 pandas ==2.0.3
 numpy ==1.25.1
 matplotlib ==3.7.2
